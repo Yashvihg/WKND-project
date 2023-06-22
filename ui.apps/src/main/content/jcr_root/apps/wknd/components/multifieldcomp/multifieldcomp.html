@@ -1,0 +1,12 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientlib.all @ categories='helloworldcomp'}" />
+<div class="cmp-multifield" data-cmp-is="helloworldtoo">
+    <h2 class="cmp-mfc">Its a multifield component</h2>
+    <div class="cmp-mfc__item" data-sly-test="${properties.text}">
+        <p class="cmp-mfc__item-label">Text property:</p>
+        <pre class="cmp-mfc__item-output" data-cmp-hook-helloworld="property">${properties.text}</pre>
+    </div>
+    <!-- <div class="cmp-helloworldtoo__item" data-sly-use.model="com.adobe.aem.guides.wknd.core.models.HelloWorldModel" data-sly-test="${model.message}">
+        <p class="cmp-helloworldtoo__item-label">Model message:</p>
+        <pre class="cmp-helloworldtoo__item-output"data-cmp-hook-helloworld="model">${model.message}</pre>
+    </div> -->
+</div>

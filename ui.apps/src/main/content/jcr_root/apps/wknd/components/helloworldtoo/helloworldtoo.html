@@ -1,0 +1,14 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientlib.all @ categories='helloworldcomp'}" />
+<div class="cmp-helloworldtoo" data-cmp-is="helloworldtoo" data-sly-use.model="com.adobe.aem.guides.wknd.core.models.HelloWorldTooModel">
+    <h1 class="cmp-helloworld__title-label">Title Property:</h1>
+    <!-- <h2 class="cmp-helloworld_too">${properties.title}</h2> -->
+    <h2 class="cmp-helloworld_too">${model.title}</h2>
+    <div class="cmp-helloworld__item" data-sly-test="${properties.text}">
+        <p class="cmp-helloworld__item-label">Text property:</p>
+        <pre class="cmp-helloworld__item-output" data-cmp-hook-helloworld="property">${properties.text}</pre>
+    </div>
+    <div class="cmp-helloworldtoo__item" data-sly-test="${model.message}">
+        <p class="cmp-helloworldtoo__item-label">Model message:</p>
+        <pre class="cmp-helloworldtoo__item-output"data-cmp-hook-helloworld="model">${model.message}</pre>
+    </div>
+</div>
